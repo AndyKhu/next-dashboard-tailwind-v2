@@ -27,7 +27,7 @@ const Layout = ({ children, authenticated = false }: Props) => {
     return (
         <>
             {authenticated ? (
-                <div className="flex relative w-full h-screen text-gray-700 bg-slate-100">
+                <div className="flex relative w-full h-screen font-inter text-gray-700 bg-slate-100">
                     <Sidebar collapse={collapse} activeMenu={activeMenu}/>
                     <div className={`w-full pl-0 ${collapse?"md:pl-[250px] lg:pl-[70px]":"md:pl-[70px] lg:pl-[250px]"}`}>
                         <Header toggleCollapse={toggleCollapse}/>
