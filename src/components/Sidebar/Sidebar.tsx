@@ -23,6 +23,11 @@ const Sidebar = ({collapse,activeMenu}:{collapse:boolean,activeMenu:string}) => 
                     url: "/components/alert"
                 },
                 {
+                    title: "button",
+                    icon: "FaPowerOff",
+                    url: "/components/button"
+                },
+                {
                     title: "input",
                     icon: "FaRegSquare",
                     url: "/components/input"
@@ -39,11 +44,11 @@ const Sidebar = ({collapse,activeMenu}:{collapse:boolean,activeMenu:string}) => 
             {item.child.map((c,index)=>{
                 return(
                     <li key={`mi-${index}`} className={`${c.url.indexOf(activeMenu)>-1?"text-white bg-gray-800":""} relative`}>
-                        <Link href={c.url} className={`flex peer items-center pl-4 p-3 hover:text-white ${collapse?"lg:justify-center":"sm:justify-center lg:justify-start"}`}>
-                            <IconComponent className={` ${collapse?"text-lg mr-4 lg:text-2xl lg:mr-0":" lg:mr-4 sm:text-2xl lg:text-lg"}`} name={c.icon}/>
-                            <span className={collapse?"lg:hidden":"hidden sm:hidden lg:inline-block capitalize"}>{c.title}</span>
+                        <Link href={c.url} className={`flex peer text-sm items-center pl-4 p-3 hover:text-white ${collapse?"lg:justify-center":"sm:justify-center lg:justify-start"}`}>
+                            <IconComponent className={` ${collapse?"text-base mr-4 lg:text-xl lg:mr-0":" lg:mr-4 sm:text-xl lg:text-base"}`} name={c.icon}/>
+                            <span className={`${collapse?"lg:hidden":"hidden sm:hidden lg:inline-block"} capitalize`}>{c.title}</span>
                         </Link>
-                        <div className={`absolute left-full ml-2 rounded top-0 h-full bg-gray-900 items-center px-3 ${collapse?"hidden peer-hover:lg:flex":"hidden peer-hover:md:flex peer-hover:lg:hidden"}`}>{c.title}</div>
+                        <div className={`absolute left-full ml-2 rounded top-0 h-full text-sm bg-gray-900 items-center px-3 capitalize ${collapse?"hidden peer-hover:lg:flex":"hidden peer-hover:md:flex peer-hover:lg:hidden"}`}>{c.title}</div>
                     </li>
                 )
             })}

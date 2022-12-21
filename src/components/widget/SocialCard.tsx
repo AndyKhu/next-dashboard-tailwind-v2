@@ -35,10 +35,10 @@ const SocialCard = ({data,hide}:Props) => {
                                 {hide?<></>:<>
                                 <td className='p-3'>
                                 <div className='flex items-center'>
-                                    <Button iconOnly icon='FaFacebookF' className='p-0 bg-transparent text-blue-700 hover:text-blue-500 hover:bg-transparent text-xs mx-1'/>
-                                    <Button iconOnly icon='FiMail' className='p-0 bg-transparent text-rose-700 hover:text-rose-500 hover:bg-transparent text-xs mx-1'/>
-                                    <Button iconOnly icon='FiGlobe' className='p-0 bg-transparent text-indigo-700 hover:indigo-blue-500 hover:bg-transparent text-xs mx-1'/>
-                                    <Button iconOnly icon='FiTwitter' className='p-0 bg-transparent text-sky-700 hover:sky-blue-500 hover:bg-transparent text-xs mx-1'/>
+                                    <Button shadowless iconOnly icon='FaFacebookF' className='p-0 bg-transparent text-blue-700 hover:text-blue-500 hover:bg-transparent text-xs mx-1'/>
+                                    <Button shadowless iconOnly icon='FiMail' className='p-0 bg-transparent text-rose-700 hover:text-rose-500 hover:bg-transparent text-xs mx-1'/>
+                                    <Button shadowless iconOnly icon='FiGlobe' className='p-0 bg-transparent text-indigo-700 hover:indigo-blue-500 hover:bg-transparent text-xs mx-1'/>
+                                    <Button shadowless iconOnly icon='FiTwitter' className='p-0 bg-transparent text-sky-700 hover:sky-blue-500 hover:bg-transparent text-xs mx-1'/>
                                 </div>
                                 </td>
                                 <td className='p-3'>
@@ -58,11 +58,11 @@ const SocialCard = ({data,hide}:Props) => {
                 <div className="flex items-center justify-between">
                     <span className="text-sm text-stone-500">Showing <span className="font-semibold">5</span> of <span className="font-semibold">25</span> Results</span>
                     <div className="flex items-center">
-                        <Button icon="FiArrowLeft" iconOnly small className="bg-transparent text-indigo-700"/>
-                        <Button label="1" small className="bg-transparent shadow w-6 h-6 p-1 mx-1 text-xs "/>
-                        <Button label="2" small className="bg-indigo-700 shadow w-6 h-6 hover:bg-indigo-700 text-white mx-1 text-xs"/>
-                        <Button label="3" small className="bg-transparent shadow w-6 h-6 p-1 mx-1"/>
-                        <Button icon="FiArrowRight" iconOnly small className="bg-transparent text-indigo-700 text-xs"/>
+                        <Button shadowless icon="FiArrowLeft" iconOnly small className="bg-transparent text-indigo-700"/>
+                        <Button shadowless label="1" small className="bg-transparent shadow w-6 h-6 p-1 mx-1 text-xs "/>
+                        <Button shadowless label="2" small color="bg-indigo-700 hover:bg-indigo-600" className="shadow w-6 h-6 text-white mx-1 text-xs"/>
+                        <Button shadowless label="3" small className="bg-transparent shadow w-6 h-6 p-1 mx-1"/>
+                        <Button shadowless icon="FiArrowRight" iconOnly small className="bg-transparent text-indigo-700 text-xs"/>
                     </div>
                 </div>
             </Card.footer>
