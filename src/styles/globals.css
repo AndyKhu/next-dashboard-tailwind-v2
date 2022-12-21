@@ -15,4 +15,80 @@
 .scrollbar::-webkit-scrollbar-thumb { 
     @apply bg-slate-500 rounded-full
 }
+/*Color */
+/*Solid*/
+.primary{
+    @apply bg-blue-600 border-0 text-white hover:bg-blue-500
+}
+.secondary{
+    @apply bg-indigo-500 border-0 text-white hover:bg-indigo-400
+}
+.success{
+    @apply bg-green-500 border-0 text-white hover:bg-green-400
+}
+.danger{
+    @apply bg-red-500 border-0 text-white hover:bg-red-400
+}
+.warning{
+    @apply bg-amber-500 border-0 text-white hover:bg-amber-400
+}
+.info{
+    @apply bg-sky-500 border-0 text-white hover:bg-sky-400
+} 
+.light-solid{
+    @apply bg-gray-100 border-0 shadow-md text-gray-900 hover:text-gray-600
+}
+.dark-solid{
+    @apply bg-gray-700 border-0 text-white hover:bg-gray-600
+}
+/*Color light */
+.primary-light{
+    @apply bg-blue-100 border-blue-300 text-blue-600 hover:bg-blue-50
+}
+.secondary-light{
+    @apply bg-indigo-100 border-indigo-300 text-indigo-600 hover:bg-indigo-50
+}
+.success-light{
+    @apply bg-green-100 border-green-300 text-green-600 hover:bg-green-50
+}
+.danger-light{
+    @apply bg-red-100 border-red-300 text-red-600 hover:bg-red-50
+}
+.warning-light{
+    @apply bg-amber-100 border-amber-300 text-amber-600 hover:bg-amber-50
+}
+.info-light{
+    @apply bg-sky-100 border-sky-300 text-sky-600 hover:bg-sky-50
+} 
+.light{
+    @apply bg-white shadow-md text-gray-400 hover:text-gray-800
+}
+.dark{
+    @apply bg-gray-100 border-gray-300 text-gray-700 hover:bg-gray-50
+}
+/*Color outline */
+.primary-outline{
+    @apply bg-white border-blue-400 text-blue-600 hover:bg-blue-600 hover:text-white
+}
+.secondary-outline{
+    @apply bg-white border-indigo-400 text-indigo-600 hover:bg-indigo-600 hover:text-white
+}
+.success-outline{
+    @apply bg-white border-green-400 text-green-600 hover:bg-green-500 hover:text-white
+}
+.danger-outline{
+    @apply bg-white border-red-400 text-red-600 hover:bg-red-600 hover:text-white
+}
+.warning-outline{
+    @apply bg-white border-amber-400 text-amber-600 hover:bg-amber-500 hover:text-white
+}
+.info-outline{
+    @apply bg-white border-sky-400 text-sky-600 hover:bg-sky-500 hover:text-white
+}
+.dark-outline{
+    @apply bg-white border-gray-200 text-gray-700 hover:bg-gray-600 hover:text-white
+}
+.light-outline{
+    @apply bg-white border-gray-400 hover:!border-t-gray-800
+}
 }

@@ -18,6 +18,11 @@ const Sidebar = ({collapse,activeMenu}:{collapse:boolean,activeMenu:string}) => 
             title: "components",
             child: [
                 {
+                    title: "alert",
+                    icon: "FaExclamationTriangle",
+                    url: "/components/alert"
+                },
+                {
                     title: "input",
                     icon: "FaRegSquare",
                     url: "/components/input"
