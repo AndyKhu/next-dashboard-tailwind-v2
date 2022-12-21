@@ -3,7 +3,7 @@ import CircularChart from "./CircularChart";
 
 const JobCard = ({title,value,percentage,color,colorh}:{title:string,value:string,percentage:number,color:string,colorh:string}) => {
     return (
-        <Card>
+        <Card className="hover:-translate-y-3 transition cursor-pointer duration-500">
             <Card.main className="flex relative justify-between items-center">
                 <div className="absolute top-0 left-0 h-full overflow-hidden z-0">
                     <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120" width="200" height="120">

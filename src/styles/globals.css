@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+/* For Chrome, EDGE, Opera, Others */
+.scrollbar::-webkit-scrollbar {
+    @apply md:w-2
+}
+  
+.scrollbar::-webkit-scrollbar-track { 
+    @apply bg-slate-300
+}
+  
+.scrollbar::-webkit-scrollbar-thumb { 
+    @apply bg-slate-500 rounded-full
+}
+}

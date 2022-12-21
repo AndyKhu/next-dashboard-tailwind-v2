@@ -1,10 +1,10 @@
-import Button from '@components/Button'
 import Card from '@components/Card'
-import IconComponent from '@components/IconComponent'
 import Layout from '@components/Layout'
+import ApplicationStatistic from '@components/widget/ApplicationStatistic'
 import JobCard from '@components/widget/JobCard'
 import SocialCard from '@components/widget/SocialCard'
 import Head from 'next/head'
+
 
 export default function Dashboard() {
   const socialCardData = [
@@ -48,7 +48,7 @@ export default function Dashboard() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className='p-3 flex flex-wrap bg-'>
-        <div className='w-full md:w-1/2 flex flex-wrap'>
+        <div className='w-full lg:w-1/2 flex flex-wrap'>
           <div className='w-full md:w-1/2 p-3'>
             <JobCard title='total jobs' value="36,894" percentage={90} color="stroke-green-400" colorh="stroke-green-300"/>
           </div>
@@ -68,8 +68,14 @@ export default function Dashboard() {
             <JobCard title='rejected' value="1,340" percentage={20} color="stroke-rose-500" colorh="stroke-rose-300"/>
           </div>
         </div>
-        <div className='w-full md:w-1/2 p-3'>
+        <div className='w-full lg:w-1/2 p-3'>
           <SocialCard data={socialCardData}/>
+        </div>
+        <div className='w-full lg:w-2/3 p-3'>
+          <ApplicationStatistic/>
+        </div>
+        <div className='w-full lg:w-1/3 p-3'>
+          <SocialCard data={socialCardData} hide/>
         </div>
       </main>
     </Layout>

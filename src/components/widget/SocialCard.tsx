@@ -7,13 +7,14 @@ interface Props{
         icon:string,
         location:string,
         iconC:string
-    }[]
+    }[],
+    hide?:boolean
 }
-const SocialCard = ({data}:Props) => {
+const SocialCard = ({data,hide}:Props) => {
     return (
-        <Card>
+        <Card className={`${hide?"h-full flex flex-col justify-between":""}`}>
             <Card.header>Featured Companies</Card.header>
-            <Card.main className="p-0">
+            <Card.main className="p-0 overflow-x-auto">
               <table className='w-full h-full'>
                 <tbody>
                     {data.map((item,index)=>{
@@ -31,6 +32,7 @@ const SocialCard = ({data}:Props) => {
                                     <span>{item.location}</span>
                                 </div>
                                 </td>
+                                {hide?<></>:<>
                                 <td className='p-3'>
                                 <div className='flex items-center'>
                                     <Button iconOnly icon='FaFacebookF' className='p-0 bg-transparent text-blue-700 hover:text-blue-500 hover:bg-transparent text-xs mx-1'/>
@@ -45,6 +47,7 @@ const SocialCard = ({data}:Props) => {
                                     <IconComponent name="FiArrowRight" className='ml-1'/>
                                 </div>
                                 </td>
+                                </>}
                             </tr>
                         )
                     })}

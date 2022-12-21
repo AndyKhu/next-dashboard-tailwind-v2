@@ -46,7 +46,7 @@ const Sidebar = ({collapse,activeMenu}:{collapse:boolean,activeMenu:string}) => 
         )
     })
     return (
-        <div className={`bg-gray-900 ${collapse?"w-[250px] lg:w-[70px]":"w-0 md:w-[70px] lg:w-[250px]"} z-10 fixed top-0 left-0 bottom-0 transition-all`}>
+        <div className={`bg-gray-900 ${collapse?"w-[250px] lg:w-[70px]":"w-0 md:w-[70px] lg:w-[250px]"} z-50 fixed top-0 left-0 bottom-0 transition-all`}>
             <div className="h-[70px] text-white flex items-center justify-center relative">
                 <div className={`items-center relative text-2xl ${collapse?"flex mr-5 md:mr-5 lg:mr-0":"mr-5 md:mr-0 lg:mr-5 sm:hidden md:flex"}`}>
                     <IconComponent className={`${collapse?"mr-2 lg:mr-0 lg:text-lime-300":"md:text-lime-300 lg:text-white mr-2 md:mr-0 lg:mr-2"}`}name="FaFreebsd"/>

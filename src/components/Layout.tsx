@@ -27,13 +27,13 @@ const Layout = ({ children, authenticated = false }: Props) => {
     return (
         <>
             {authenticated ? (
-                <div className="flex relative w-full h-screen font-inter text-gray-700 bg-slate-100">
+                <div className="flex relative w-full h-screen font-inter text-gray-700 overflow-hidden">
                     <Sidebar collapse={collapse} activeMenu={activeMenu}/>
                     <div className={`w-full pl-0 ${collapse?"md:pl-[250px] lg:pl-[70px]":"md:pl-[70px] lg:pl-[250px]"}`}>
                         <Header toggleCollapse={toggleCollapse}/>
                         <div className="h-[calc(100%-70px)]">
-                            <div className="p-3 h-[40px] shadow py-2 uppercase font-bold bg-white">{activeMenu}</div>
-                            <div className="h-[calc(100%-40px)]overflow-y-auto">
+                            <div className="p-3 h-[40px] border-b shadow py-2 uppercase font-bold bg-white">{activeMenu}</div>
+                            <div className="h-[calc(100%-40px)] overflow-y-auto scrollbar bg-slate-100">
                                 {children}
                             </div>
                         </div>
