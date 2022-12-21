@@ -3,7 +3,7 @@ import Layout from "@components/Layout";
 import Head from "next/head";
 import Alert from "@components/base/Alert";
 import { useState } from "react";
-import Button from "@components/Button";
+import Button from "@components/base/Button";
 
 const Alerts = () => {
     const[active,setActive] = useState(true)

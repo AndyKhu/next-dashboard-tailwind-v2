@@ -15,6 +15,10 @@
 .scrollbar::-webkit-scrollbar-thumb { 
     @apply bg-slate-500 rounded-full
 }
+
+input[type="date"]::-webkit-calendar-picker-indicator,input[type="time"]::-webkit-calendar-picker-indicator {
+    @apply opacity-0 absolute top-0 bottom-0 left-0 right-0 w-auto h-auto cursor-pointer;
+}
 /*Color */
 /*Solid*/
 .primary{

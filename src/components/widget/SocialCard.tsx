@@ -1,4 +1,4 @@
-import Button from "@components/Button";
+import Button from "@components/base/Button";
 import Card from "@components/Card";
 import IconComponent from "@components/IconComponent";
 interface Props{

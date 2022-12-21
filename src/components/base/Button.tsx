@@ -1,4 +1,4 @@
-import IconComponent from "./IconComponent";
+import IconComponent from "@components/IconComponent";
 type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {iconlabel?:boolean,animation?:boolean,ghost?:boolean,shadowless?:boolean,icon?:string,iconclassName?:string,label?:string,className?:string,color?:string,roundedFull?:boolean,small?:boolean,large?:boolean,iconOnly?:boolean}
 function splitProps(props:Props){
     const result = {...props}

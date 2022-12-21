@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "@components/base/Button";
 import IconComponent from "./IconComponent";
 
 const Header = ({toggleCollapse}:{toggleCollapse():void}) => {
