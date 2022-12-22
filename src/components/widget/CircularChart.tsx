@@ -2,7 +2,7 @@ const CircularChart = ({value,color,colorh}:{value:number,color?:string,colorh?:
     return (
         <div className="w-20 h-20 relative group/item cursor-pointer">
             <svg viewBox="0 0 36 36" className="block">
-                <path className="stroke-[#f3f6f9] fill-none max-h-[50px]"
+                <path className="stroke-[#f3f6f9] dark:stroke-gray-700 fill-none max-h-[50px]"
                     strokeWidth="2.5"
                     strokeDasharray="100, 100"
                     d="M18 2.0845

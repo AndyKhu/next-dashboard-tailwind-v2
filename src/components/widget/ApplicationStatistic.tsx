@@ -18,19 +18,19 @@ const ApplicationStatistic = () => {
               <div className='flex flex-wrap border-b border-dashed'>
                 <div className='w-1/2 md:w-1/4 border-b md:border-b-0 p-4 flex border-r border-dashed flex-col justify-center items-center'>
                   <span className='font-semibold'>3,364</span>
-                  <span className='text-sm text-gray-500'>New Application</span>
+                  <span className='text-sm text-gray-500 dark:text-white'>New Application</span>
                 </div>
                 <div className='w-1/2 md:w-1/4 border-b md:border-b-0 p-4 flex border-r border-dashed flex-col justify-center items-center'>
                   <span className='font-semibold'>2,804</span>
-                  <span className='text-sm text-gray-500'>Interview</span>
+                  <span className='text-sm text-gray-500 dark:text-white'>Interview</span>
                 </div>
                 <div className='w-1/2 md:w-1/4 p-4 flex border-r border-dashed flex-col justify-center items-center'>
                   <span className='font-semibold'>2,402</span>
-                  <span className='text-sm text-gray-500'>Hired</span>
+                  <span className='text-sm text-gray-500 dark:text-white'>Hired</span>
                 </div>
                 <div className='w-1/2 md:w-1/4 p-4 flex flex-col justify-center items-center'>
                   <span className='font-semibold text-emerald-400'>8k</span>
-                  <span className='text-sm text-gray-500'>Total Applications</span>
+                  <span className='text-sm text-gray-500 dark:text-white'>Total Applications</span>
                 </div>
               </div>
               <div className='h-[345px] p-4 text-xs '>

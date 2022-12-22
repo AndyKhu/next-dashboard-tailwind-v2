@@ -3,7 +3,7 @@ import Card from "@components/Card";
 import Layout from "@components/Layout";
 import Head from "next/head";
 
-const input = () => {
+const Inputs = () => {
     return (
         <Layout authenticated>
           <Head>
@@ -69,4 +69,4 @@ const input = () => {
       )
 }
 
-export default input;
+export default Inputs;

@@ -3,7 +3,7 @@ import Card from "@components/Card";
 import Layout from "@components/Layout";
 import Head from "next/head";
 
-const button = () => {
+const Buttons = () => {
     return (
         <Layout authenticated>
           <Head>
@@ -202,4 +202,4 @@ const button = () => {
     );
 }
 
-export default button;
+export default Buttons;

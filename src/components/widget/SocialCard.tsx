@@ -19,7 +19,7 @@ const SocialCard = ({data,hide}:Props) => {
                 <tbody>
                     {data.map((item,index)=>{
                         return (
-                            <tr key={`data-${index}`} className="border-b hover:bg-zinc-100">
+                            <tr key={`data-${index}`} className="border-b hover:bg-zinc-100 dark:hover:bg-gray-700">
                                 <td className='p-3'>
                                 <div className='flex items-center'>
                                     <IconComponent name={item.icon} border borderC={item.iconC}/>
@@ -42,7 +42,7 @@ const SocialCard = ({data,hide}:Props) => {
                                 </div>
                                 </td>
                                 <td className='p-3'>
-                                <div className='flex items-center text-xs text-indigo-700'>
+                                <div className='flex items-center text-xs text-indigo-700 dark:text-white'>
                                     <span>View More</span>
                                     <IconComponent name="FiArrowRight" className='ml-1'/>
                                 </div>
@@ -56,13 +56,13 @@ const SocialCard = ({data,hide}:Props) => {
             </Card.main>
             <Card.footer>
                 <div className="flex items-center justify-between">
-                    <span className="text-sm text-stone-500">Showing <span className="font-semibold">5</span> of <span className="font-semibold">25</span> Results</span>
+                    <span className="text-sm text-stone-500 dark:text-white">Showing <span className="font-semibold">5</span> of <span className="font-semibold">25</span> Results</span>
                     <div className="flex items-center">
-                        <Button shadowless icon="FiArrowLeft" iconOnly small className="bg-transparent text-indigo-700"/>
-                        <Button shadowless label="1" small className="bg-transparent shadow w-6 h-6 p-1 mx-1 text-xs "/>
+                        <Button shadowless icon="FiArrowLeft" iconOnly small className="bg-transparent text-indigo-700 dark:text-white"/>
+                        <Button shadowless label="1" small className="bg-transparent shadow w-6 h-6 p-1 mx-1 text-xs dark:hover:text-gray-700"/>
                         <Button shadowless label="2" small color="bg-indigo-700 hover:bg-indigo-600" className="shadow w-6 h-6 text-white mx-1 text-xs"/>
-                        <Button shadowless label="3" small className="bg-transparent shadow w-6 h-6 p-1 mx-1"/>
-                        <Button shadowless icon="FiArrowRight" iconOnly small className="bg-transparent text-indigo-700 text-xs"/>
+                        <Button shadowless label="3" small className="bg-transparent shadow w-6 h-6 p-1 mx-1 dark:hover:text-gray-700"/>
+                        <Button shadowless icon="FiArrowRight" iconOnly small className="bg-transparent text-indigo-700 text-xs dark:text-white"/>
                     </div>
                 </div>
             </Card.footer>

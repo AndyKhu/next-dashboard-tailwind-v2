@@ -11,7 +11,7 @@ const JobCard = ({title,value,percentage,color,colorh}:{title:string,value:strin
                     </svg>
                 </div>
                 <div className="z-10 py-2">
-                    <p className="mb-4 text-gray-500 text-[13px] font-medium uppercase tracking-wide">{title}</p>
+                    <p className="mb-4 text-gray-500 dark:text-white text-[13px] font-medium uppercase tracking-wide">{title}</p>
                     <h4 className="text-[22px] font-semibold">{value}</h4>
                 </div>
                 <div className="z-10">

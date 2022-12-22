@@ -12,6 +12,9 @@ interface Props {
 const Layout = ({ children, authenticated = false }: Props) => {
     const dispatch = useAppDispatch()
     const collapse = useAppSelector(state => state.init.collapse)
+    // useEffect(()=>{
+    //     dispatch(setCollapse(false))
+    // },[dispatch])
     const toggleCollapse = () => {
         dispatch(setCollapse(!collapse))
     }
@@ -27,13 +30,13 @@ const Layout = ({ children, authenticated = false }: Props) => {
     return (
         <>
             {authenticated ? (
-                <div className="flex relative w-full h-screen font-inter text-gray-700 overflow-hidden">
+                <div className="flex relative w-full h-screen font-inter text-gray-700 dark:text-white overflow-hidden">
                     <Sidebar collapse={collapse} activeMenu={activeMenu}/>
-                    <div className={`w-full pl-0 ${collapse?"md:pl-[250px] lg:pl-[70px]":"md:pl-[70px] lg:pl-[250px]"}`}>
+                    <div className={`w-full pl-0 ${collapse?"md:pl-[250px] lg:pl-[70px]":"md:pl-[70px] lg:pl-[250px]"} transition-all`}>
                         <Header toggleCollapse={toggleCollapse}/>
                         <div className="h-[calc(100%-70px)]">
-                            <div className="p-3 h-[40px] border-b shadow py-2 uppercase font-bold bg-white">{activeMenu}</div>
-                            <div className="h-[calc(100%-40px)] overflow-y-auto scrollbar bg-slate-100">
+                            <div className="p-3 h-[40px] border-b dark:border-b-0 shadow py-2 uppercase font-bold bg-white dark:bg-gray-900">{activeMenu}</div>
+                            <div className="h-[calc(100%-40px)] overflow-y-auto scrollbar bg-slate-100 dark:bg-neutral-900">
                                 {children}
                             </div>
                         </div>
