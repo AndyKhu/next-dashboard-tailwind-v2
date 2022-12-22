@@ -1,7 +1,7 @@
 import IconComponent from "@components/IconComponent";
 import Link from "next/link";
 
-const Sidebar = ({collapse,activeMenu}:{collapse:boolean,activeMenu:string}) => {
+const Sidebar = ({collapse,activeMenu,toggleCollapse}:{collapse:boolean,activeMenu:string,toggleCollapse():void}) => {
     
     const menu = [
         {
@@ -49,7 +49,11 @@ const Sidebar = ({collapse,activeMenu}:{collapse:boolean,activeMenu:string}) => 
             {item.child.map((c,index)=>{
                 return(
                     <li key={`mi-${index}`} className={`${c.url.indexOf(activeMenu)>-1?"text-white bg-gray-800 dark:bg-gray-800":""} relative`}>
-                        <Link href={c.url} className={`flex peer text-sm items-center pl-4 p-3 hover:text-white ${collapse?"lg:justify-center":"sm:justify-center lg:justify-start"}`}>
+                        <Link href={c.url} onClick={()=>{toggleCollapse()}} className={`flex peer text-sm items-center md:hidden pl-4 p-3 hover:text-white ${collapse?"lg:justify-center":"sm:justify-center lg:justify-start"}`}>
+                            <IconComponent className={` ${collapse?"text-base mr-4 lg:text-xl lg:mr-0":" lg:mr-4 sm:text-xl lg:text-base"}`} name={c.icon}/>
+                            <span className={`${collapse?"lg:hidden":"hidden sm:hidden lg:inline-block"} capitalize`}>{c.title}</span>
+                        </Link>
+                        <Link href={c.url} className={`peer text-sm items-center hidden md:flex pl-4 p-3 hover:text-white ${collapse?"lg:justify-center":"sm:justify-center lg:justify-start"}`}>
                             <IconComponent className={` ${collapse?"text-base mr-4 lg:text-xl lg:mr-0":" lg:mr-4 sm:text-xl lg:text-base"}`} name={c.icon}/>
                             <span className={`${collapse?"lg:hidden":"hidden sm:hidden lg:inline-block"} capitalize`}>{c.title}</span>
                         </Link>

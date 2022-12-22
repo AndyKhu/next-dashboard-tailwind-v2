@@ -18,6 +18,9 @@ const Layout = ({ children, authenticated = false }: Props) => {
     const toggleCollapse = () => {
         dispatch(setCollapse(!collapse))
     }
+    const toggleCollapse2 = () => {
+        dispatch(setCollapse(false))
+    }
     const router = useRouter();
     const [activeMenu,setActiveMenu] = useState("dashboard")
     useEffect(()=>{
@@ -31,7 +34,7 @@ const Layout = ({ children, authenticated = false }: Props) => {
         <>
             {authenticated ? (
                 <div className="flex relative w-full h-screen font-inter text-gray-700 dark:text-white overflow-hidden">
-                    <Sidebar collapse={collapse} activeMenu={activeMenu}/>
+                    <Sidebar toggleCollapse={toggleCollapse2} collapse={collapse} activeMenu={activeMenu}/>
                     <div className={`w-full pl-0 ${collapse?"md:pl-[250px] lg:pl-[70px]":"md:pl-[70px] lg:pl-[250px]"} transition-all`}>
                         <Header toggleCollapse={toggleCollapse}/>
                         <div className="h-[calc(100%-70px)]">

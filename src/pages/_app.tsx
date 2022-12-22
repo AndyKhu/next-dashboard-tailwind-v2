@@ -10,6 +10,7 @@ const inter = Inter({
   display: 'swap'
 })
 
+
 const App = ({ Component, pageProps }: AppProps) => (
   <Provider store={store}>
     <div className={`${inter.variable} font-sans`}>
