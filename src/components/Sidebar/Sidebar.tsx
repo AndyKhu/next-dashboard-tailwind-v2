@@ -23,6 +23,16 @@ const Sidebar = ({collapse,activeMenu,toggleCollapse}:{collapse:boolean,activeMe
                     url: "/components/alert"
                 },
                 {
+                    title: "avatar",
+                    icon: "FaCircle",
+                    url: "/components/avatar"
+                },
+                {
+                    title: "badge",
+                    icon: "FaRegDotCircle",
+                    url: "/components/badge"
+                },
+                {
                     title: "button",
                     icon: "FaPowerOff",
                     url: "/components/button"
@@ -31,6 +41,11 @@ const Sidebar = ({collapse,activeMenu,toggleCollapse}:{collapse:boolean,activeMe
                     title: "checkbox",
                     icon: "FaCheckSquare",
                     url: "/components/checkbox"
+                },
+                {
+                    title: "dropdown",
+                    icon: "FaCaretSquareDown",
+                    url: "/components/dropdown"
                 },
                 {
                     title: "input",

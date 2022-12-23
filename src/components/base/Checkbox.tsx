@@ -62,7 +62,7 @@ const Checkbox = (props:Props) => {
     const bcolor = getbcolor(color)
     const tcolor = gettcolor(color)
     return (
-        <div className={`flex mb-4 ${className}`}>
+        <div className={`flex mb-4 items-center font-medium ${className}`}>
             <div className={`relative inline-flex mr-2 w-[20px] h-[18px] ${radio?"text-[9px]":"text-xs"} items-center justify-center`}>
                 <input type="checkbox" {...atb} id={`checkbox-${id}`}  className={`absolute z-10 w-full h-full top-0 cursor-pointer appearance-none peer`}/>
                 {/* border */}

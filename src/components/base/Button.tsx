@@ -1,5 +1,5 @@
 import IconComponent from "@components/IconComponent";
-type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {iconlabel?:boolean,animation?:boolean,ghost?:boolean,shadowless?:boolean,icon?:string,iconclassName?:string,label?:string,className?:string,color?:string,roundedFull?:boolean,small?:boolean,large?:boolean,iconOnly?:boolean}
+type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {iconr?:string,iconlabel?:boolean,animation?:boolean,ghost?:boolean,shadowless?:boolean,icon?:string,iconclassName?:string,label?:string,className?:string,color?:string,roundedFull?:boolean,small?:boolean,large?:boolean,iconOnly?:boolean}
 function splitProps(props:Props){
     const result = {...props}
     delete result['className']
@@ -14,6 +14,7 @@ function splitProps(props:Props){
     delete result['shadowless']
     delete result['ghost']
     delete result['animation']
+    delete result['iconr']
     delete result['iconlabel']
     return result
 }
@@ -21,7 +22,7 @@ function getSize(small?:boolean,large?:boolean){
     if(small)
         return "text-xs"
     else if(large)
-        return "text-base"
+        return "text-xl"
     else
         return "text-sm"
 }
@@ -54,25 +55,29 @@ function getLabelColor(color?:string){
 }
 const Button = (props:Props) => {
     const atb = splitProps(props)
-    const {icon,color,className,small,large,label,iconOnly,roundedFull,iconclassName,shadowless,ghost,animation,iconlabel} = props
+    const {icon,iconr,color,className,small,large,label,iconOnly,roundedFull,iconclassName,shadowless,ghost,animation,iconlabel} = props
     const size = getSize(small,large).concat(iconOnly?"":" px-3");
     const labelc = getLabelColor(color)
     // const size = iconOnly?(small?"text-sm":medium?"text-base":large?"text-2xl":"text-xl"):(small?"px-2 text-sm":medium?"px-4 text-base":large?"px-8 text-2xl":"px-6 text-xl")
     if(iconlabel){
         return (
-            <button className={`px-0 flex ${shadowless?"":"border shadow-md"} justify-center items-center ${roundedFull?"rounded-full":"rounded"} ${size} ${color?color:"bg-gray-300 hover:bg-gray-200"} ${ghost?"border-0 shadow-none ghost":""} ${animation?"hover:-translate-y-1 transition":""} ${className}`} {...atb}>
-                <div className={`flex h-9 px-3 items-center justify-center ${labelc} ${color?.includes("outline")?"text-white":""} ${roundedFull?"rounded-full":"rounded-tl rounded-bl"}`}>
+            <button className={`px-0 flex ${iconr?"justify-between":""} h-9 ${shadowless?"":"border shadow-md"} justify-center items-center ${roundedFull?"rounded-full":"rounded"} ${size} ${color?color:"bg-gray-300 hover:bg-gray-200"} ${ghost?"border-0 shadow-none ghost":""} ${animation?"hover:-translate-y-1 transition":""} ${className}`} {...atb}>
+                {icon?<div className={`flex h-9 px-3 items-center justify-center ${labelc} ${color?.includes("outline")?"text-white":""} ${roundedFull?"rounded-full":"rounded-tl rounded-bl"}`}>
                     <IconComponent name={icon?icon:""} className={`${label?iconOnly?"":"":""} ${iconclassName}`}/>
-                </div>
-                {iconOnly?<></>:<span className="px-3 capitalize font-medium">{label}</span>}
+                </div>:<></>}
+                {iconOnly || !label?<></>:<span className="px-3 capitalize font-medium">{label}</span>}
+                {iconr?<div className={`flex h-9 px-3 items-center justify-center ${labelc} ${color?.includes("outline")?"text-white":""} ${roundedFull?"rounded-full":"rounded-tr rounded-br"}`}>
+                    <IconComponent name={iconr?iconr:""} className={`${label?iconOnly?"":"":""} ${iconclassName}`}/>
+                </div>:<></>}
             </button>
         )
     }
     else{
         return (
-            <button className={`p-2 flex ${shadowless?"":"border shadow-md"} justify-center items-center ${roundedFull?"rounded-full":"rounded"} ${size} ${color?color:"bg-gray-300 hover:bg-gray-200"} ${ghost?"border-0 shadow-none ghost":""} ${animation?"hover:-translate-y-1 transition":""} ${className}`} {...atb}>
-                <IconComponent name={icon?icon:""} className={`${label?iconOnly?"":"mr-2":""} ${iconclassName}`}/>
-                {iconOnly?<></>:<span className="capitalize font-medium">{label}</span>}
+            <button className={`${iconOnly?"p-1":"p-2"} flex ${iconr?"justify-between":""} ${shadowless?"":"border shadow-md"} justify-center items-center ${roundedFull?"rounded-full":"rounded"} ${size} ${color?color:"bg-gray-300 hover:bg-gray-200"} ${ghost?"border-0 shadow-none ghost":""} ${animation?"hover:-translate-y-1 transition":""} ${className}`} {...atb}>
+                {icon?<IconComponent name={icon?icon:""} className={`${label?iconOnly?"":"mr-2":""} ${iconclassName}`}/>:<></>}
+                {iconOnly || !label?<></>:<span className="capitalize font-medium">{label}</span>}
+                {iconr?<IconComponent name={iconr?iconr:""} className={`${label?iconOnly?"":"ml-2":""} ${iconclassName}`}/>:<></>}
             </button>
         )
     }

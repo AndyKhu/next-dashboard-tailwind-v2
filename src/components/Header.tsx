@@ -3,6 +3,8 @@ import { useAppDispatch, useAppSelector } from "@redux/hook";
 import { useEffect, useState } from "react";
 import { setDarkMode,setFullScreen } from '@redux/initialSlice'
 import IconComponent from "./IconComponent";
+import Avatar from "./base/Avatar";
+import Badge from "./base/Badge";
 
 function handleFullScreen(){
     if(document.fullscreenElement)
@@ -38,14 +40,13 @@ const Header = ({toggleCollapse}:{toggleCollapse():void}) => {
         <div className="h-[70px] w-full border-b dark:border-b-2 dark:border-b-neutral-900 flex px-3 items-center justify-between bg-white dark:bg-gray-800 text-gray-600 dark:text-white">
             <Button shadowless large onClick={toggleCollapse} icon="FaBars" iconOnly color="hover:bg-gray-100 dark:hover:bg-neutral-700"/>
             <div className="flex h-full items-center justify-center">
-                <Button onClick={()=> handleFullScreen()}shadowless large icon={full?"FaCompress":"FaExpand"} iconOnly color="hover:bg-gray-100 dark:hover:bg-neutral-700"/>
-                <Button onClick={() => dispatch(setDarkMode(!darkMode))} shadowless large icon={darkMode?"FiSun":"FaRegMoon"} iconOnly color="hover:bg-gray-100 dark:hover:bg-neutral-700"/>
-                <span className="relative mr-2">
+                <Button className="mx-1" onClick={()=> handleFullScreen()}shadowless large icon={full?"FaCompress":"FaExpand"} iconOnly color="hover:bg-gray-100 dark:hover:bg-neutral-700"/>
+                <Button className="mx-1" onClick={() => dispatch(setDarkMode(!darkMode))} shadowless large icon={darkMode?"FiSun":"FaRegMoon"} iconOnly color="hover:bg-gray-100 dark:hover:bg-neutral-700"/>
+                <Badge color="bg-red-400 text-white" value="3" overlap className="mx-1">
                     <Button shadowless large icon="FaRegBell" iconOnly color="hover:bg-gray-100 dark:hover:bg-neutral-700" iconclassName="animate-wiggle"/>
-                    <div className="min-w-[1.25rem] px-1 h-4 rounded-full -right-1 -top-1 absolute bg-red-400 text-white flex justify-center items-center text-xs font-medium">3</div>
-                </span>
+                </Badge>
                 <div className="flex px-2 cursor-pointer h-full items-center justify-center hover:bg-gray-100 dark:hover:bg-neutral-700">
-                    <div className="w-7 h-7 bg-gray-300  dark:bg-white rounded-full mr-2 "></div>
+                    <Avatar size="md" className="mr-2 dark:bg-white dark:text-gray-700">A</Avatar>
                     <span className="text-sm font-medium tracking-tight">Anna Adame</span>
                     <IconComponent className="ml-2" name="FaAngleDown"/>
                 </div>

@@ -8,6 +8,9 @@ module.exports = {
   darkMode: 'class',
   theme: {
     extend: {
+      transitionProperty: {
+        'maxheight': 'max-height',
+      },
       width:{
         "1/8": "12.5%"
       },
