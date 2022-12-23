@@ -1,4 +1,4 @@
-import IconComponent from "@components/IconComponent";
+import Icon from "@components/Icon";
 import { useId, useState } from "react";
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {roundedfull?:boolean,iconl?:string,iconr?:string,label?:string,split?:boolean,xlabel?:string}
 function splitProps(props:Props){
@@ -26,12 +26,12 @@ const Input = (props:Props) => {
                 <div className={`absolute bottom-0 top-0 scale-y-105 transition-all duration-500 border-b-2 rounded border-indigo-600  ${focus && !readOnly?"w-full left-0":"w-0"}`}></div>
                 {iconl?
                 <div className={`w-12 h-9 flex items-center justify-center rounded-tl rounded-bl ${split?"bg-gray-200":""}`}>
-                    <IconComponent name={iconl}/>
+                    <Icon name={iconl}/>
                 </div>:<></>}
                 <input onFocus={()=>{setFocus(true)}} onBlur={()=>{setFocus(false)}} id={`input-${id}`} className={`${tmp} text-sm placeholder:text-sm placeholder:font-light placeholder:tracking-wide h-9 focus:outline-none bg-transparent w-full`} {...atb} type={show?type:"text"} />
                 {iconr?
                 <div onClick={()=>{if(type=="password")setShow(!show)}} className={`w-12 ${type=="password"?"z-10":""} h-9 flex items-center justify-center rounded-tr rounded-br ${split?"bg-gray-200":""} ${type == "password"?"cursor-pointer":""}`}>
-                    <IconComponent name={show?iconr:"FaRegEyeSlash"}/>
+                    <Icon name={show?iconr:"FaRegEyeSlash"}/>
                 </div>:<></>}
             </div>
             {xlabel?<div className="text-xs mt-2 text-zinc-400">{xlabel}</div>:<></>}

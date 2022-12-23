@@ -1,5 +1,5 @@
 type Props = React.DetailedHTMLProps<React.InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {outline?:boolean,color?:string,className?:string,label?:string,disabled?:boolean}
-import IconComponent from "@components/IconComponent"
+import Icon from "@components/Icon"
 import { useId } from "react"
 function splitProps(props:Props){
     const result = {...props}
@@ -72,7 +72,7 @@ const Checkbox = (props:Props) => {
                 {/* fill effect */}
                 <span className={`absolute h-full w-full top-0 z-0 ${radio?"rounded-full":"rounded"} ${disabled?"disabled":""}  hidden ${colors} transition peer-checked:animate-[ping_1s_ease-in-out] ${outline?"":"peer-checked:block"}`}/>
                 {/* Icon */}
-                <IconComponent name={radio?"FaCircle":"FaCheck"} className={`z-[1] ${outline?tcolor:color=="light-solid"?"text-gray-300":"text-white"} ${disabled?"disabled":""} hidden peer-checked:block`}/>
+                <Icon name={radio?"FaCircle":"FaCheck"} className={`z-[1] ${outline?tcolor:color=="light-solid"?"text-gray-300":"text-white"} ${disabled?"disabled":""} hidden peer-checked:block`}/>
             </div>
             {label?<label className="w-[calc(100%-18px)]">{label}</label>:<></>}
         </div>

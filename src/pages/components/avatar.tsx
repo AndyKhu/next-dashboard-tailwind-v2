@@ -1,7 +1,7 @@
 import Avatar from "@components/base/Avatar";
 import Checkbox from "@components/base/Checkbox";
 import Card from "@components/Card";
-import IconComponent from "@components/IconComponent";
+import Icon from "@components/Icon";
 import Layout from "@components/Layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -24,7 +24,7 @@ const Avatars = () => {
                             <p className="text-sm text-gray-500 mb-4">Use the <span className="text-rose-500">Avatar</span> Component to show a defaut Avatar</p>
                             <div className="flex items-center justify-center md:justify-start flex-wrap gap-4">
                                 <Avatar color="primary">
-                                    <IconComponent name="FaRegClock"/>
+                                    <Icon name="FaRegClock"/>
                                 </Avatar>
                                 <Avatar>
                                     <Image src={"/hero.jpg"} fill alt="hero" sizes="36px"/>
@@ -41,7 +41,7 @@ const Avatars = () => {
                             <p className="text-sm text-gray-500 mb-4">Use Attribute <span className="text-rose-500">Tile</span> to remove rounded</p>
                             <div className="flex items-center justify-center md:justify-start flex-wrap gap-4">
                                 <Avatar color="primary" tile>
-                                    <IconComponent name="FaRegClock"/>
+                                    <Icon name="FaRegClock"/>
                                 </Avatar>
                                 <Avatar tile>
                                     <Image src={"/hero.jpg"} fill alt="hero" sizes="36px"/>

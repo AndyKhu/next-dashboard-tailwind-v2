@@ -44,7 +44,7 @@ const Layout = ({ children, authenticated = false }: Props) => {
                             </div>
                         </div>
                     </div>
-                    <div onClick={toggleCollapse} className={`${collapse?"bg-black opacity-30 absolute top-0 left-0 bottom-0 right-0 md:hidden":""}`}></div>
+                    <div onClick={toggleCollapse} className={`${collapse?"bg-black-1 opacity-30 absolute top-0 left-0 bottom-0 right-0 md:hidden":""}`}></div>
                 </div>
             ):(
                 <div>

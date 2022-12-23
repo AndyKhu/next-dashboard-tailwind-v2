@@ -15,14 +15,42 @@ module.exports = {
         "1/8": "12.5%"
       },
       colors: {
-        'primary': colors.blue[700],
-        'secondary': colors.indigo[700],
-        'success': colors.emerald[600],
-        'danger': colors.rose[600],
-        'warning': colors.amber[500],
-        'info': colors.sky[500],
-        'dark': colors.gray[700],
-        'light': colors.gray[100]
+        'primary': {
+          "1":colors.blue[700],
+          "2":colors.blue[500]
+        },
+        'secondary': {
+          "1":colors.indigo[700],
+          "2":colors.indigo[500]
+        },
+        'success': {
+        "1":colors.emerald[600],
+        "2":colors.emerald[500]
+        },
+        'danger': {
+          "1":colors.rose[600],
+          "2":colors.rose[500]
+        },
+        'warning': {
+          "1": colors.amber[500],
+          "2":colors.amber[400]
+        },
+        'info': {
+          "1": colors.sky[500],
+          "2":colors.sky[400]
+        },
+        'dark': {
+          "1": colors.gray[700],
+          "2":colors.gray[500]
+        },
+        'light': {
+          "1": colors.gray[100],
+          "2":colors.gray[200]
+        },
+        'black': {
+          "1": colors.black,
+          "2": "rgba(0,0,0,0.5)"
+        }
 
       },
       fontFamily:{
@@ -30,12 +58,23 @@ module.exports = {
       },
       animation: {
         wiggle: 'wiggle 0.5s ease-in-out infinite',
-        progress: 'progress 1s ease-out forwards'
+        progress: 'progress 1s ease-out forwards',
+        ripple: 'ripple 500ms linear'
       },
       keyframes: {
         wiggle: {
           '0%, 100%': { transform: 'rotate(-10deg)' },
           '50%': { transform: 'rotate(10deg)' },
+        },
+        ripple: {
+          from : {
+            transform : 'scale(0.3)',
+            opacity: 0
+          },
+          to: {
+            transform : 'scale(3)',
+            opacity: 0.3
+          }
         },
         progress: {
           '0%': { 'stroke-dasharray': '0 100'}

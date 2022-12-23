@@ -1,7 +1,7 @@
 import Badge from "@components/base/Badge";
 import Checkbox from "@components/base/Checkbox";
 import Card from "@components/Card";
-import IconComponent from "@components/IconComponent";
+import Icon from "@components/Icon";
 import Layout from "@components/Layout";
 import Head from "next/head";
 import { useState } from "react";
@@ -37,7 +37,7 @@ const Badges = () => {
                                 <div className="p-2 border-t border-b md:border-t-0 text-center w-full font-semibold">Result</div>
                                 <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center p-8">
                                     <Badge dot={dot} bottom={bot} left={left} overlap={overlap} value="3">
-                                        <IconComponent name="FaBell" size={30}/>
+                                        <Icon name="FaBell" size={30}/>
                                     </Badge>
                                 </div>
                             </div>
@@ -70,7 +70,7 @@ const Badges = () => {
                                 <div className="p-2 border-t border-b md:border-t-0 text-center w-full font-semibold">Result</div>
                                 <div className="w-full h-full bg-gray-300 dark:bg-gray-700 flex items-center justify-center p-8">
                                     <Badge value="3" color={color}>
-                                        <IconComponent name="FaBell" size={30}/>
+                                        <Icon name="FaBell" size={30}/>
                                     </Badge>
                                 </div>
                             </div>

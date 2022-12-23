@@ -19,7 +19,7 @@ const Badge = ({ children, className,color,tile,left,bottom,dot,value,overlap}: 
     const mx = overlap?(left?"ml-3":"mr-3"):(left?"ml-4":"mr-4")
     return (
         <div className={`relative inline-block ${mx} ${className}`}>
-            <span className={`absolute inline-flex justify-center items-center ${dot?"h-3 w-3":"h-4 px-1 min-w-[1rem]"} ${color?color:"bg-gray-700 dark:bg-white dark:text-gray-700 text-white"} ${position} ${tile?"":"rounded-full"} text-xs`}>
+            <span className={`absolute z-10 inline-flex justify-center items-center ${dot?"h-3 w-3":"h-4 px-1 min-w-[1rem]"} ${color?color:"bg-gray-700 dark:bg-white dark:text-gray-700 text-white"} ${position} ${tile?"":"rounded-full"} text-xs`}>
                 {dot?"":value}
             </span>
             {children}

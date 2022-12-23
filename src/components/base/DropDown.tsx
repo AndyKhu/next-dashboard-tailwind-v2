@@ -13,7 +13,7 @@ const DropDown = (props:Props) => {
     const {data} = props
     return (
         <div className="inline-block relative group">
-            <Button onBlur={()=>{setShow(false)}} onClick={()=>{setShow(!show)}} label="test" color="primary" iconr="FaCaretDown"/>
+            {/* <Button onBlur={()=>{setShow(false)}} onClick={()=>{setShow(!show)}} label="test" color="primary" iconr="FaCaretDown"/> */}
             <div className={`absolute shadow overflow-hidden ${show?"block":"hidden"} top-full left-0 bg-white`}>
                 <ul>
                     {data?.map((item,index) =>{

@@ -1,86 +1,52 @@
-import IconComponent from "@components/IconComponent";
-type Props = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & {iconr?:string,iconlabel?:boolean,animation?:boolean,ghost?:boolean,shadowless?:boolean,icon?:string,iconclassName?:string,label?:string,className?:string,color?:string,roundedFull?:boolean,small?:boolean,large?:boolean,iconOnly?:boolean}
+import {ReactNode} from 'react'
+type Object = {[key:string]:string}
+type ButtonProps = React.DetailedHTMLProps<React.ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement>
+type customProps = {
+    block?:boolean,
+    disabled?:boolean,
+    children?:ReactNode,
+    size?:string,
+    color?:string,
+    iconlabel?:boolean,
+    icon?:boolean,
+    depressed?:boolean,
+    ghost?:boolean,
+    uppercase?:boolean,
+    rounded?:boolean,
+    animated?:boolean
+}
+type Props =  ButtonProps & customProps
 function splitProps(props:Props){
     const result = {...props}
-    delete result['className']
-    delete result['color']
-    delete result['icon']
-    delete result['label']
-    delete result['small']
-    delete result['roundedFull']
-    delete result['large']
-    delete result['iconOnly']
-    delete result['iconclassName']
-    delete result['shadowless']
-    delete result['ghost']
-    delete result['animation']
-    delete result['iconr']
-    delete result['iconlabel']
+    delete result["block"],
+    delete result["size"],
+    delete result["children"],
+    delete result["color"]
+    delete result["iconlabel"]
+    delete result["icon"]
+    delete result["depressed"]
+    delete result["ghost"]
+    delete result["uppercase"]
+    delete result["rounded"]
+    delete result["animated"]
     return result
 }
-function getSize(small?:boolean,large?:boolean){
-    if(small)
-        return "text-xs"
-    else if(large)
-        return "text-xl"
-    else
-        return "text-sm"
-}
-function getLabelColor(color?:string){
-    if(color?.includes("primary")){
-        return "bg-blue-500"
-    }
-    else if(color?.includes("secondary")){
-        return "bg-indigo-500"
-    }
-    else if(color?.includes("success")){
-        return "bg-emerald-500"
-    }
-    else if(color?.includes("danger")){
-        return "bg-rose-500"
-    }
-    else if(color?.includes("warning")){
-        return "bg-amber-400"
-    }
-    else if(color?.includes("info")){
-        return "bg-sky-400"
-    }
-    else if(color?.includes("light")){
-        return "bg-gray-200"
-    }
-    else if(color?.includes("dark")){
-        return "bg-gray-500"
-    }
-    return ""
+const sizeConfig:Object = {
+    xsmall: "h-6 min-w-[36px] px-2",
+    small: "h-7 min-w-[50px] px-3",
+    base: "h-9 min-w-[4rem] px-4",
+    large: "h-11 min-w-[78px] px-5",
+    xlarge: "h-[52px] min-w-[92px] px-6"
 }
 const Button = (props:Props) => {
-    const atb = splitProps(props)
-    const {icon,iconr,color,className,small,large,label,iconOnly,roundedFull,iconclassName,shadowless,ghost,animation,iconlabel} = props
-    const size = getSize(small,large).concat(iconOnly?"":" px-3");
-    const labelc = getLabelColor(color)
-    // const size = iconOnly?(small?"text-sm":medium?"text-base":large?"text-2xl":"text-xl"):(small?"px-2 text-sm":medium?"px-4 text-base":large?"px-8 text-2xl":"px-6 text-xl")
-    if(iconlabel){
-        return (
-            <button className={`px-0 flex ${iconr?"justify-between":""} h-9 ${shadowless?"":"border shadow-md"} justify-center items-center ${roundedFull?"rounded-full":"rounded"} ${size} ${color?color:"bg-gray-300 hover:bg-gray-200"} ${ghost?"border-0 shadow-none ghost":""} ${animation?"hover:-translate-y-1 transition":""} ${className}`} {...atb}>
-                {icon?<div className={`flex h-9 px-3 items-center justify-center ${labelc} ${color?.includes("outline")?"text-white":""} ${roundedFull?"rounded-full":"rounded-tl rounded-bl"}`}>
-                    <IconComponent name={icon?icon:""} className={`${label?iconOnly?"":"":""} ${iconclassName}`}/>
-                </div>:<></>}
-                {iconOnly || !label?<></>:<span className="px-3 capitalize font-medium">{label}</span>}
-                {iconr?<div className={`flex h-9 px-3 items-center justify-center ${labelc} ${color?.includes("outline")?"text-white":""} ${roundedFull?"rounded-full":"rounded-tr rounded-br"}`}>
-                    <IconComponent name={iconr?iconr:""} className={`${label?iconOnly?"":"":""} ${iconclassName}`}/>
-                </div>:<></>}
-            </button>
-        )
-    }
-    else{
-        return (
-            <button className={`${iconOnly?"p-1":"p-2"} flex ${iconr?"justify-between":""} ${shadowless?"":"border shadow-md"} justify-center items-center ${roundedFull?"rounded-full":"rounded"} ${size} ${color?color:"bg-gray-300 hover:bg-gray-200"} ${ghost?"border-0 shadow-none ghost":""} ${animation?"hover:-translate-y-1 transition":""} ${className}`} {...atb}>
-                {icon?<IconComponent name={icon?icon:""} className={`${label?iconOnly?"":"mr-2":""} ${iconclassName}`}/>:<></>}
-                {iconOnly || !label?<></>:<span className="capitalize font-medium">{label}</span>}
-                {iconr?<IconComponent name={iconr?iconr:""} className={`${label?iconOnly?"":"ml-2":""} ${iconclassName}`}/>:<></>}
-            </button>
-        )
-    }
+    const atb:ButtonProps = splitProps(props)
+    const {children,block,disabled,size,color,iconlabel,icon,depressed,className,ghost,uppercase,rounded,animated} = props
+    return (
+        <button {...atb} className={`${disabled?"disabled":""} ${size?sizeConfig[size]:sizeConfig["base"]} transition-all overflow-hidden ${color?color:"bg-white dark:bg-gray-500 hover:bg-gray-100"} ${ghost?"!border-0 !shadow-none ghost":""} group relative ${depressed?"":"shadow"} ${rounded?"rounded-full":"rounded"} items-center font-medium justify-center ${uppercase?"uppercase":"capitalize"} text-sm ${block?"flex w-full":"inline-flex"} ${iconlabel?"!p-0":""} ${icon?"!p-1 !min-w-0":""} ${animated?"hover:-translate-y-1":""} ${className}`}>
+            <span className={`inline-flex items-center ${iconlabel?"h-full":""}`}>{children}</span>
+            {disabled?<></>:<span className={`absolute rounded-[50%] scale-[3] w-full h-full ${color?color.includes("light") ||color == "dark"?"bg-black-2":"bg-white":"bg-black-1"} opacity-30 right-[50%] hidden group-active:block group-active:animate-ripple `}></span>}
+        </button>
+    );
 }
 
 export default Button;

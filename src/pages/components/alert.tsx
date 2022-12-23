@@ -20,7 +20,7 @@ const Alerts = () => {
             <title>Alert</title>
           </Head>
           <main>
-            <div className="p-4 flex flex-col gap-4 text-gray-600 dark:text-white">
+            <div className="p-4 flex flex-col gap-4 text-gray-700 dark:text-white">
                 <Card>
                     <Card.header>Default Alerts</Card.header>
                     <Card.main className="p-3">
@@ -120,25 +120,25 @@ const Alerts = () => {
                                 <Alert close={()=>{setActive(false)}} iconr="FaTimes"  color="primary-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Primary alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive(true)}} small color="primary-light" label="Show"/>}
+                                <Button onClick={()=>{setActive(true)}} color="primary-light">Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Secondary Alert</p>
                                 {active2?
                                 <Alert close={()=>{setActive2(false)}} iconr="FaTimes"  color="secondary-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Secondary alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive2(true)}} small color="secondary-light" label="Show"/>}
+                                <Button onClick={()=>{setActive2(true)}} color="secondary-light">Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Success Alert</p>
                                 {active3?
                                 <Alert close={()=>{setActive3(false)}} iconr="FaTimes"  color="success-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Success alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive3(true)}} small color="success-light" label="Show"/>}
+                                <Button onClick={()=>{setActive3(true)}} color="success-light">Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Danger Alert</p>
                                 {active4?
                                 <Alert close={()=>{setActive4(false)}} iconr="FaTimes"  color="danger-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Danger alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive4(true)}} small color="danger-light" label="Show"/>}
+                                <Button onClick={()=>{setActive4(true)}} color="danger-light">Show</Button>}
                             </div>
                             <div className="w-full lg:w-1/2 p-3 pb-0 flex flex-col">
                                 <p className="text-sm mb-2  tracking-wide font-medium">Warning Alert</p>
@@ -146,25 +146,25 @@ const Alerts = () => {
                                 <Alert close={()=>{setActive5(false)}} iconr="FaTimes"  color="warning-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Warning alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive5(true)}} small color="warning-light" label="Show"/>}
+                                <Button onClick={()=>{setActive5(true)}} color="warning-light">Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Info Alert</p>
                                 {active6?
                                 <Alert close={()=>{setActive6(false)}} iconr="FaTimes"  color="info-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Info alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive6(true)}} small color="info-light" label="Show"/>}
+                                <Button onClick={()=>{setActive6(true)}} color="info-light">Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Light Alert</p>
                                 {active7?
                                 <Alert close={()=>{setActive7(false)}} iconr="FaTimes"  color="light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Light alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive7(true)}} small color="light" label="Show"/>}
+                                <Button onClick={()=>{setActive7(true)}} color="light" >Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Dark Alert</p>
                                 {active8?
                                 <Alert close={()=>{setActive8(false)}} iconr="FaTimes"  color="dark" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Dark alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive8(true)}} small color="dark" label="Show"/>}
+                                <Button onClick={()=>{setActive8(true)}} color="dark" >Show</Button>}
                             </div>
                         </div>
                     </Card.main>

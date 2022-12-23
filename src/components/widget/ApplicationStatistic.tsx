@@ -8,10 +8,18 @@ const ApplicationStatistic = () => {
             <Card.header className='border-dashed flex justify-between items-center'>
               <span>Applications Statistic</span>
               <div className='flex gap-1'>
-                <Button label='ALL' small className='py-1 shadow text-xs' color='bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700'/>
-                <Button label='1M' small className='py-1 shadow text-xs' color='bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700'/>
-                <Button label='6M' small className='py-1 shadow text-xs' color='bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700'/>
-                <Button label='1Y' small className='py-1 shadow text-xs' color='bg-indigo-50 hover:bg-indigo-500 hover:text-white text-indigo-700'/>
+                <Button size="xsmall" className="text-xs" color='bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700'>
+                  ALL
+                </Button>
+                <Button size="xsmall" className="text-xs" color='bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700'>
+                  1M
+                </Button>
+                <Button size="xsmall" className="text-xs" color='bg-blue-100 hover:bg-blue-500 hover:text-white text-blue-700'>
+                  6M
+                </Button>
+                <Button size="xsmall" className="text-xs" color='bg-indigo-50 hover:bg-indigo-500 hover:text-white text-indigo-700'>
+                  1Y
+                </Button>
               </div>
             </Card.header>
             <Card.main className='p-0'>

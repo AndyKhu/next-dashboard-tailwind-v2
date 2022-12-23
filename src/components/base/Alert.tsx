@@ -1,4 +1,4 @@
-import IconComponent from "@components/IconComponent";
+import Icon from "@components/Icon";
 
 interface Props{
     children: React.ReactNode,
@@ -57,14 +57,14 @@ const Alert = ({children,className,color,borderless,iconl,iconr,iconlc,iconrc,cl
         <div className={`w-full flex items-center  rounded text-sm ${borderless?"border-0":"border"} ${color?color:"bg-gray-100 border-gray-300"} ${topborder?`${tborderc} border-t-2`:""} ${leftborder?`${lborderc} border-l-2`:""} shadow ${className}`}>
             {iconl?<div className={`h-full p-3 text-lg rounded-tl rounded-bl flex justify-center items-center ${labelrounded?"":iconlc} ${labelrounded?"relative w-12":""}`}>
                 {labelrounded?<div className={`absolute left-0 right-0 rounded-tr-full rounded-br-full py-1 top-1/4 flex justify-center items-center ${iconlc}`}>
-                    <IconComponent name={iconl}/>
-                </div>: <IconComponent name={iconl}/>}
+                    <Icon name={iconl}/>
+                </div>: <Icon name={iconl}/>}
             </div>:<></>}
             <div className={`p-3 w-full`}>
             {children}
             </div>
             {iconr?<div onClick={close?close:()=>{}} className={`h-full p-3 text-lg rounded-tr rounded-br flex justify-center items-center ${iconrc} ${close?"cursor-pointer":""}`}>
-                <IconComponent name={iconr}/>
+                <Icon name={iconr}/>
             </div>:<></>}
         </div>
     );
