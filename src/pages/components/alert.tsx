@@ -58,7 +58,7 @@ const Alerts = () => {
                                     <strong> Hi! </strong> A simple <b>Light alert</b> —check it out!
                                 </Alert>
                                 <p className="text-sm mb-2  tracking-wide font-medium">Dark Alert</p>
-                                <Alert color="dark" className="mb-3">
+                                <Alert color="dark-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Dark alert</b> —check it out!
                                 </Alert>
                             </div>
@@ -102,7 +102,7 @@ const Alerts = () => {
                                     <strong> Hi! </strong> A simple <b>Light alert</b> —check it out!
                                 </Alert>
                                 <p className="text-sm mb-2  tracking-wide font-medium">Dark Alert</p>
-                                <Alert borderless color="dark" className="mb-3">
+                                <Alert borderless color="dark-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Dark alert</b> —check it out!
                                 </Alert>
                             </div>
@@ -161,10 +161,10 @@ const Alerts = () => {
                                 <Button onClick={()=>{setActive7(true)}} color="light" >Show</Button>}
                                 <p className="text-sm mb-2  tracking-wide font-medium">Dark Alert</p>
                                 {active8?
-                                <Alert close={()=>{setActive8(false)}} iconr="FaTimes"  color="dark" className="mb-3">
+                                <Alert close={()=>{setActive8(false)}} iconr="FaTimes"  color="dark-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Dark alert</b> —check it out!
                                 </Alert>:
-                                <Button onClick={()=>{setActive8(true)}} color="dark" >Show</Button>}
+                                <Button onClick={()=>{setActive8(true)}} color="dark-light" >Show</Button>}
                             </div>
                         </div>
                     </Card.main>
@@ -246,7 +246,7 @@ const Alerts = () => {
                                     <strong> Hi! </strong> A simple <b>Light alert</b> —check it out!
                                 </Alert>
                                 <p className="text-sm mb-2  tracking-wide font-medium">Dark Alert</p>
-                                <Alert leftborder iconl="FaRegGrinTongue" color="dark" className="mb-3">
+                                <Alert leftborder iconl="FaRegGrinTongue" color="dark-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Dark alert</b> —check it out!
                                 </Alert>
                             </div>
@@ -420,7 +420,7 @@ const Alerts = () => {
                                     <strong> Hi! </strong> A simple <b>Light alert</b> —check it out!
                                 </Alert>
                                 <p className="text-sm mb-2  tracking-wide font-medium">Dark Alert</p>
-                                <Alert iconl="FaRegGrinTongue" borderless iconlc="bg-gray-800 text-white" labelrounded color="dark" className="mb-3">
+                                <Alert iconl="FaRegGrinTongue" borderless iconlc="bg-gray-800 text-white" labelrounded color="dark-light" className="mb-3">
                                     <strong> Hi! </strong> A simple <b>Dark alert</b> —check it out!
                                 </Alert>
                             </div>

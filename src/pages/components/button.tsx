@@ -85,7 +85,7 @@ const Buttons = () => {
                             <Button color="warning-light">warning</Button>
                             <Button color="info-light">info</Button>
                             <Button color="light">light</Button>
-                            <Button color="dark">dark</Button>
+                            <Button color="dark-light">dark</Button>
                         </div>
                     </Card.main>
                 </Card>
