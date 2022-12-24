@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "./Header";
 import Sidebar from "./Sidebar/Sidebar";
 import { setCollapse } from '@redux/initialSlice'
+import Head from "next/head";
 
 interface Props {
     children: React.ReactNode
@@ -32,6 +33,9 @@ const Layout = ({ children, authenticated = false }: Props) => {
     },[router.pathname]);
     return (
         <>
+        <Head>
+            <link rel="icon"  href="/favicon/favicon.ico" />
+        </Head>
             {authenticated ? (
                 <div className="flex relative w-full h-screen font-inter text-gray-700 dark:text-white overflow-hidden">
                     <Sidebar toggleCollapse={toggleCollapse2} collapse={collapse} activeMenu={activeMenu}/>

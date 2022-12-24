@@ -27,7 +27,7 @@ const Avatars = () => {
                                     <Icon name="FaRegClock"/>
                                 </Avatar>
                                 <Avatar>
-                                    <Image src={"/hero.jpg"} fill alt="hero" sizes="36px"/>
+                                    <Image src={"/images/hero.jpg"} fill alt="hero" sizes="36px"/>
                                 </Avatar>
                                 <Avatar color="danger">
                                     A
@@ -44,7 +44,7 @@ const Avatars = () => {
                                     <Icon name="FaRegClock"/>
                                 </Avatar>
                                 <Avatar tile>
-                                    <Image src={"/hero.jpg"} fill alt="hero" sizes="36px"/>
+                                    <Image src={"/images/hero.jpg"} fill alt="hero" sizes="36px"/>
                                 </Avatar>
                                 <Avatar color="danger" tile >
                                     A
