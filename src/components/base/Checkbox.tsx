@@ -12,21 +12,21 @@ function splitProps(props:Props){
 function getbcolor(color?:string){
     switch(color){
         case "primary":
-            return "border-primary"
+            return "border-primary-1"
         case "secondary":
-            return "border-secondary"
+            return "border-secondary-1"
         case "success":
-            return "border-success"
+            return "border-success-1"
         case "danger":
-            return "border-danger"
+            return "border-danger-1"
         case "warning":
-            return "border-warning"
+            return "border-warning-1"
         case "info":
-            return "border-info"
+            return "border-info-1"
         case "light":
-            return "border-light shadow"
+            return "border-light-1 shadow"
         case "dark":
-            return "border-dark"
+            return "border-dark-1"
         default:
             return "border-gray-500"
     }
@@ -34,21 +34,21 @@ function getbcolor(color?:string){
 function gettcolor(color?:string){
     switch(color){
         case "primary":
-            return "text-primary"
+            return "text-primary-1"
         case "secondary":
-            return "text-secondary"
+            return "text-secondary-1"
         case "success":
-            return "text-success"
+            return "text-success-1"
         case "danger":
-            return "text-danger"
+            return "text-danger-1"
         case "warning":
-            return "text-warning"
+            return "text-warning-1"
         case "info":
-            return "text-info"
+            return "text-info-1"
         case "light":
-            return "text-light"
+            return "text-light-1"
         case "dark":
-            return "text-dark"
+            return "text-dark-1"
         default:
             return "text-gray-500"
     }

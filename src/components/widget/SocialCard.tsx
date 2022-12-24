@@ -37,16 +37,16 @@ const SocialCard = ({data,hide}:Props) => {
                                 {hide?<></>:<>
                                 <td className='p-3'>
                                 <div className='flex items-center'>
-                                    <Button depressed icon size="small" className='bg-transparent text-blue-700 hover:text-blue-500 hover:bg-transparent text-xs mx-1'>
+                                    <Button depressed icon size="small" className='bg-transparent dark:bg-transparent text-blue-700 hover:text-blue-500 hover:bg-transparent text-xs mx-1'>
                                         <Icon name="FaFacebookF"/>
                                     </Button>
-                                    <Button depressed icon size="small" className='bg-transparent text-rose-700 hover:text-rose-500 hover:bg-transparent text-xs mx-1'>
+                                    <Button depressed icon size="small" className='bg-transparent dark:bg-transparent text-rose-700 hover:text-rose-500 hover:bg-transparent text-xs mx-1'>
                                         <Icon name="FiMail"/>
                                     </Button>
-                                    <Button depressed icon size="small" className='bg-transparent text-indigo-700 hover:indigo-blue-500 hover:bg-transparent text-xs mx-1'>
+                                    <Button depressed icon size="small" className='bg-transparent dark:bg-transparent text-indigo-700 hover:indigo-blue-500 hover:bg-transparent text-xs mx-1'>
                                         <Icon name="FiGlobe"/>
                                     </Button>
-                                    <Button depressed icon size="small" className='bg-transparent text-sky-700 hover:sky-blue-500 hover:bg-transparent text-xs mx-1'>
+                                    <Button depressed icon size="small" className='bg-transparent dark:bg-transparent text-sky-700 hover:sky-blue-500 hover:bg-transparent text-xs mx-1'>
                                         <Icon name="FiTwitter"/>
                                     </Button>
                                 </div>

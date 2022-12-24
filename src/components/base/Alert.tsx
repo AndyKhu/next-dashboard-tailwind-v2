@@ -54,7 +54,7 @@ const Alert = ({children,className,color,borderless,iconl,iconr,iconlc,iconrc,cl
     const lborderc = getlborderc(color)
     const tborderc = getlbordetc(color)
     return (
-        <div className={`w-full flex items-center  rounded text-sm ${borderless?"border-0":"border"} ${color?color:"bg-gray-100 border-gray-300"} ${topborder?`${tborderc} border-t-2`:""} ${leftborder?`${lborderc} border-l-2`:""} shadow ${className}`}>
+        <div className={`w-full flex items-center  rounded text-sm ${borderless?"border-0":"border"} ${color?color:"bg-gray-100 border-gray-300"} ${topborder?`${tborderc} !border-t-2`:""} ${leftborder?`${lborderc} !border-l-2`:""} shadow ${className}`}>
             {iconl?<div className={`h-full p-3 text-lg rounded-tl rounded-bl flex justify-center items-center ${labelrounded?"":iconlc} ${labelrounded?"relative w-12":""}`}>
                 {labelrounded?<div className={`absolute left-0 right-0 rounded-tr-full rounded-br-full py-1 top-1/4 flex justify-center items-center ${iconlc}`}>
                     <Icon name={iconl}/>

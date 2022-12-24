@@ -32,6 +32,7 @@ function splitProps(props:Props){
     return result
 }
 const sizeConfig:Object = {
+    "2xsmall": "h-5 min-w-[28px] px-1",
     xsmall: "h-6 min-w-[36px] px-2",
     small: "h-7 min-w-[50px] px-3",
     base: "h-9 min-w-[4rem] px-4",
