@@ -51,7 +51,6 @@ module.exports = {
           "1": colors.black,
           "2": "rgba(0,0,0,0.5)"
         }
-
       },
       fontFamily:{
         inter: ['var(--font-inter)','ui-sans-serif']
@@ -59,9 +58,24 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 0.5s ease-in-out infinite',
         progress: 'progress 1s ease-out forwards',
-        ripple: 'ripple 500ms linear'
+        ripple: 'ripple 0.5s linear',
+        fromtop: 'fromtop 0.3s linear',
+        frombot: 'frombot 0.3s linear',
+        popup: 'popup 0.1s linear'
       },
       keyframes: {
+        popup: {
+          '0%': {scale: 0},
+          '100%': {scale: 1}
+        },
+        fromtop: {
+          '0%': {top: "-100%"},
+          '100%':{top: 0}
+        },
+        frombot: {
+          '0%': {top: "100%"},
+          '100%':{top: 0}
+        },
         wiggle: {
           '0%, 100%': { transform: 'rotate(-10deg)' },
           '50%': { transform: 'rotate(10deg)' },

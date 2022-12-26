@@ -37,7 +37,7 @@ const Layout = ({ children, authenticated = false }: Props) => {
             <link rel="icon"  href="/favicon/favicon.ico" />
         </Head>
             {authenticated ? (
-                <div className="flex relative w-full h-screen font-inter text-gray-700 dark:text-white overflow-hidden">
+                <div id="app" className="flex relative w-full h-screen font-inter text-gray-700 dark:text-white overflow-hidden">
                     <Sidebar toggleCollapse={toggleCollapse2} collapse={collapse} activeMenu={activeMenu}/>
                     <div className={`w-full pl-0 ${collapse?"md:pl-[250px] lg:pl-[70px]":"md:pl-[70px] lg:pl-[250px]"} transition-all`}>
                         <Header toggleCollapse={toggleCollapse}/>

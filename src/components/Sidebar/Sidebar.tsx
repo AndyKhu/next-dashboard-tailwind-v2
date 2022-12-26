@@ -38,6 +38,11 @@ const Sidebar = ({collapse,activeMenu,toggleCollapse}:{collapse:boolean,activeMe
                     url: "/components/chip"
                 },
                 {
+                    title: "modal",
+                    icon: "FaBookOpen",
+                    url: "/components/modal"
+                },
+                {
                     title: "button",
                     icon: "FaPowerOff",
                     url: "/components/button"
@@ -48,9 +53,9 @@ const Sidebar = ({collapse,activeMenu,toggleCollapse}:{collapse:boolean,activeMe
                     url: "/components/checkbox"
                 },
                 {
-                    title: "dropdown",
+                    title: "menu",
                     icon: "FaCaretSquareDown",
-                    url: "/components/dropdown"
+                    url: "/components/menu"
                 },
                 {
                     title: "input",
